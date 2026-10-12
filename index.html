@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karthikeyan | 20+ Years Experienced Surveyor & Civil Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+    :root {
+      --bg-dark: #050814;
+      --bg-card: rgba(13, 22, 45, 0.65);
+      --electric-cyan: #00f2fe;
+      --vibrant-blue: #4facfe;
+      --neon-amber: #ffaa00;
+      --neon-purple: #8a2be2;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Ambient Dynamic Floating Orbs */
+    .ambient-glow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -2;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(140px);
+      opacity: 0.38;
+      animation: drift 20s infinite alternate ease-in-out;
+    }
+
+    .orb-1 {
+      width: 550px;
+      height: 550px;
+      background: radial-gradient(circle, #00f2fe, #4facfe);
+      top: -150px;
+      left: -150px;
+    }
+
+    .orb-2 {
+      width: 650px;
+      height: 650px;
+      background: radial-gradient(circle, #ffaa00, #ff5e36);
+      bottom: -200px;
+      right: -150px;
+      animation-delay: -7s;
+    }
+
+    .orb-3 {
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, #8a2be2, #4facfe);
+      top: 45%;
+      left: 45%;
+      transform: translate(-50%, -50%);
+      animation-delay: -12s;
+    }
+
+    @keyframes drift {
+      0% { transform: translateY(0px) rotate(0deg) scale(1); }
+      50% { transform: translateY(80px) rotate(90deg) scale(1.15); }
+      100% { transform: translateY(-40px) rotate(180deg) scale(0.95); }
+    }
+
+    /* Cyber Blueprint Grid */
+    .grid-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(0, 242, 254, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 242, 254, 0.04) 1px, transparent 1px);
+      background-size: 55px 55px;
+      z-index: -1;
+    }
+
+    /* Floating Header */
+    header {
+      position: fixed;
+      top: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 1200px;
+      background: rgba(13, 22, 45, 0.7);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(0, 242, 254, 0.2);
+      border-radius: 50px;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 2rem;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.4);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--neon-amber), #ff5e36);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #050814;
+      font-size: 1.1rem;
+      box-shadow: 0 0 18px rgba(255, 170, 0, 0.5);
+    }
+
+    .logo-text {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      background: linear-gradient(90deg, #fff, var(--electric-cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-muted);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--electric-cyan);
+      text-shadow: 0 0 12px rgba(0, 242, 254, 0.6);
+    }
+
+    .cta-btn {
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      background: linear-gradient(135deg, var(--electric-cyan), var(--vibrant-blue));
+      color: #050814;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.88rem;
+      box-shadow: 0 0 20px rgba(0, 242, 254, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(0, 242, 254, 0.7);
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8.5rem 1.5rem 4rem 1.5rem;
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 900px;
+    }
+
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 22px;
+      background: rgba(255, 170, 0, 0.1);
+      border: 1px solid rgba(255, 170, 0, 0.4);
+      border-radius: 50px;
+      color: var(--neon-amber);
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 25px rgba(255, 170, 0, 0.2);
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--neon-amber);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--neon-amber);
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.9); opacity: 0.6; }
+      50% { transform: scale(1.4); opacity: 1; }
+      100% { transform: scale(0.9); opacity: 0.6; }
+    }
+
+    .hero h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(3rem, 7.5vw, 5.2rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: 1px;
+      margin-bottom: 1.2rem;
+      background: linear-gradient(135deg, #ffffff 30%, #a5f3fc 65%, #38bdf8 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: glowTitle 3s infinite alternate ease-in-out;
+    }
+
+    @keyframes glowTitle {
+      0% { filter: drop-shadow(0 0 15px rgba(0, 242, 254, 0.2)); }
+      100% { filter: drop-shadow(0 0 30px rgba(0, 242, 254, 0.45)); }
+    }
+
+    .hero-tag {
+      font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      background: linear-gradient(90deg, var(--neon-amber), #ff8800);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 680px;
+      margin: 0 auto 2.8rem auto;
+    }
+
+    .btn-group {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      padding: 1rem 2.6rem;
+      border-radius: 50px;
+      background: linear-gradient(135deg, var(--neon-amber), #ff6200);
+      color: #050814;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 0 30px rgba(255, 170, 0, 0.45);
+      transition: all 0.35s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 0 45px rgba(255, 170, 0, 0.7);
+    }
+
+    .btn-secondary {
+      padding: 1rem 2.4rem;
+      border-radius: 50px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(0, 242, 254, 0.3);
+      color: #fff;
+      font-weight: 600;
+      text-decoration: none;
+      backdrop-filter: blur(10px);
+      transition: all 0.35s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--electric-cyan);
+      background: rgba(0, 242, 254, 0.12);
+      color: var(--electric-cyan);
+      box-shadow: 0 0 25px rgba(0, 242, 254, 0.3);
+      transform: translateY(-4px);
+    }
+
+    /* Stats Grid */
+    .metric-grid {
+      margin-top: 4.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .metric-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 1.8rem;
+      backdrop-filter: blur(15px);
+      transition: all 0.3s;
+    }
+
+    .metric-card:hover {
+      border-color: rgba(0, 242, 254, 0.4);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0, 242, 254, 0.15);
+    }
+
+    .metric-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.1rem;
+      color: var(--electric-cyan);
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+
+    .metric-card.highlight h3 {
+      color: var(--neon-amber);
+      text-shadow: 0 0 20px rgba(255, 170, 0, 0.5);
+    }
+
+    .metric-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+
+    /* Section Styling */
+    section {
+      padding: 7rem 8%;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 4.5rem;
+    }
+
+    .section-tag {
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--neon-amber);
+      display: block;
+      margin-bottom: 0.6rem;
+    }
+
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 2.7rem;
+      color: #fff;
+    }
+
+    /* Service Cards (3D Glowing Glass) */
+    .services-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .glow-card {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 26px;
+      padding: 3rem 2.2rem;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(20px);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .glow-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(transparent, transparent, var(--electric-cyan), transparent);
+      animation: rotateBorder 6s linear infinite;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 0;
+    }
+
+    .glow-card::after {
+      content: '';
+      position: absolute;
+      inset: 2px;
+      background: rgba(9, 15, 32, 0.95);
+      border-radius: 24px;
+      z-index: 1;
+    }
+
+    @keyframes rotateBorder {
+      100% { transform: rotate(360deg); }
+    }
+
+    .glow-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+    }
+
+    .glow-card:hover::before {
+      opacity: 1;
+    }
+
+    .card-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .icon-wrapper {
+      width: 70px;
+      height: 70px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(0, 242, 254, 0.15), rgba(79, 172, 254, 0.15));
+      border: 1px solid rgba(0, 242, 254, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.9rem;
+      color: var(--electric-cyan);
+      margin-bottom: 1.8rem;
+      transition: all 0.35s ease;
+    }
+
+    .glow-card:hover .icon-wrapper {
+      background: linear-gradient(135deg, var(--neon-amber), #ff6200);
+      color: #050814;
+      border-color: transparent;
+      transform: rotate(8deg) scale(1.1);
+      box-shadow: 0 0 30px rgba(255, 170, 0, 0.6);
+    }
+
+    .glow-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.45rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .glow-card p {
+      color: var(--text-muted);
+      line-height: 1.75;
+      font-size: 0.97rem;
+    }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2rem;
+    }
+
+    .contact-box {
+      background: var(--bg-card);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 24px;
+      padding: 2.4rem 1.8rem;
+      text-align: center;
+      text-decoration: none;
+      backdrop-filter: blur(18px);
+      transition: all 0.35s ease;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .contact-box:hover {
+      transform: translateY(-8px);
+      border-color: var(--electric-cyan);
+      box-shadow: 0 15px 40px rgba(0, 242, 254, 0.2);
+    }
+
+    .contact-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(0, 242, 254, 0.1);
+      border: 1px solid rgba(0, 242, 254, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: var(--electric-cyan);
+      margin-bottom: 1.2rem;
+      transition: all 0.3s;
+    }
+
+    .contact-box:hover .contact-avatar {
+      background: var(--electric-cyan);
+      color: #050814;
+      box-shadow: 0 0 25px var(--electric-cyan);
+    }
+
+    .contact-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--neon-amber);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact-value {
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 600;
+      word-break: break-all;
+      transition: color 0.3s;
+    }
+
+    .contact-box:hover .contact-value {
+      color: var(--electric-cyan);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 2.5rem 6%;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      background: rgba(5, 8, 20, 0.9);
+    }
+
+    @media (max-width: 768px) {
+      header { width: 95%; padding: 0.8rem 1.2rem; }
+      nav { display: none; }
+      .metric-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ambient Glowing Blobs -->
+  <div class="ambient-glow">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+  <div class="grid-bg"></div>
+
+  <!-- Header -->
+  <header>
+    <a href="#home" class="logo-container">
+      <div class="logo-icon">
+        <i class="fa-solid fa-compass-drafting"></i>
+      </div>
+      <span class="logo-text">KARTHIKEYAN</span>
+    </a>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:+919080241625" class="cta-btn">
+      <i class="fa-solid fa-phone"></i> Contact
+    </a>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="status-badge">
+        <div class="pulse-dot"></div> 20+ Years Experienced Surveyor
+      </div>
+      <h1>KARTHIKEYAN</h1>
+      <div class="hero-tag">Licensed Surveyor | Civil Engineer</div>
+      <p>Over 20+ years of proven expertise in Precision Land Surveying, Topographical Mapping, Civil Alignment &amp; Structural Planning with millimeter-level accuracy.</p>
+      
+      <div class="btn-group">
+        <a href="tel:+919080241625" class="btn-primary">
+          <i class="fa-solid fa-phone-volume"></i> Call Directly
+        </a>
+        <a href="mailto:karthikeyansurveyor1982@gmail.com" class="btn-secondary">
+          <i class="fa-solid fa-envelope"></i> Send Email
+        </a>
+      </div>
+
+      <!-- Stats Bar with 20+ Years Highlight -->
+      <div class="metric-grid">
+        <div class="metric-card highlight">
+          <h3>20+ Years</h3>
+          <p>Field Experience</p>
+        </div>
+        <div class="metric-card">
+          <h3>100%</h3>
+          <p>Accuracy Standard</p>
+        </div>
+        <div class="metric-card">
+          <h3>GPS &amp; Total</h3>
+          <p>Modern Stations</p>
+        </div>
+        <div class="metric-card">
+          <h3>Licensed</h3>
+          <p>Civil Engineer</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <div class="section-head">
+      <span class="section-tag">Engineering Solutions</span>
+      <h2 class="section-title">Specialized Services</h2>
+    </div>
+
+    <div class="services-wrapper">
+      <div class="glow-card">
+        <div class="card-content">
+          <div class="icon-wrapper">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+          <h3>Land &amp; Boundary Survey</h3>
+          <p>2+ decades of master precision in boundary demarcation, plot perimeter calculation, FMB sketch matching, and high-precision GPS positioning.</p>
+        </div>
+      </div>
+
+      <div class="glow-card">
+        <div class="card-content">
+          <div class="icon-wrapper">
+            <i class="fa-solid fa-building-circle-check"></i>
+          </div>
+          <h3>Civil Survey &amp; Leveling</h3>
+          <p>Advanced digital contouring, terrain leveling, structural site preparation, foundation marking, and road alignment.</p>
+        </div>
+      </div>
+
+      <div class="glow-card">
+        <div class="card-content">
+          <div class="icon-wrapper">
+            <i class="fa-solid fa-draw-polygon"></i>
+          </div>
+          <h3>Layout &amp; Site Planning</h3>
+          <p>Subdivision planning, site blueprint preparation, CAD layout documentation, and certified engineering guidance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="section-head">
+      <span class="section-tag">Direct Access</span>
+      <h2 class="section-title">Contact Karthikeyan</h2>
+    </div>
+
+    <div class="contact-grid">
+      <a href="tel:+919080241625" class="contact-box">
+        <div class="contact-avatar">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <div class="contact-label">Mobile Number</div>
+        <div class="contact-value">+91 9080241625</div>
+      </a>
+
+      <a href="mailto:karthikeyansurveyor1982@gmail.com" class="contact-box">
+        <div class="contact-avatar">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="contact-label">Email Address</div>
+        <div class="contact-value">karthikeyansurveyor1982@gmail.com</div>
+      </a>
+
+      <a href="https://www.karthikeyansurveyor1982.com" target="_blank" class="contact-box">
+        <div class="contact-avatar">
+          <i class="fa-solid fa-globe"></i>
+        </div>
+        <div class="contact-label">Official Website</div>
+        <div class="contact-value">www.karthikeyansurveyor1982.com</div>
+      </a>
+
+      <div class="contact-box">
+        <div class="contact-avatar">
+          <i class="fa-solid fa-location-dot"></i>
+        </div>
+        <div class="contact-label">Location</div>
+        <div class="contact-value">S u. Pappamabadi</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Karthikeyan - Licensed Surveyor &amp; Civil Engineer. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
